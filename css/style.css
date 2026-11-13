@@ -1,0 +1,105 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+  font-family: Arial, sans-serif; 
+  line-height: 1.6; 
+  color: #333; 
+  background: #FFF5F2; 
+}
+
+/* HEADER + FLEXBOX */
+.navbar {
+  display: flex; /* FLEXBOX */
+  justify-content: space-between;
+  align-items: center;
+  background: #E85A42;
+  color: white;
+  padding: 15px 30px;
+}
+.logo { font-size: 24px; }
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: white; text-decoration: none; font-weight: bold; }
+.nav-links a.active { text-decoration: underline; }
+#menuBtn { display: none; background: white; color: #E85A42; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; }
+
+/* HERO */
+.hero { 
+  flex-direction: column;
+  text-align: center;
+   padding: 20px;
+   background: #FFE8E6; 
+  }
+.hero h2 { 
+  font-size: 30px; 
+  color: #E85A42;
+   margin-bottom: 10px; 
+  }
+.hero button { 
+  background: #E85A42; 
+  color: white; 
+  border: none; 
+  padding: 12px 20px; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  margin-top: 15px; 
+}
+
+/* FLEXBOX SECTION - Services */
+.flex-container {
+  display: flex; /* FLEXBOX */
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.service-box { background: white; padding: 20px; border-radius: 10px; width: 280px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+
+/* GRID SECTION - Menu / Products */
+.grid-container {
+  display: grid; /* CSS GRID */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* space between cards */
+  padding: 20px;
+}
+.card { background: white; padding: 15px; border-radius: 10px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.card img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
+
+/* CONTENT */
+.page-content, .intro { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+.section-title { text-align: center; margin: 30px 0 10px; color: #E85A42; }
+
+/* FORM */
+form { display: flex; flex-direction: column; gap: 8px; background: white; padding: 25px; border-radius: 10px; margin-top: 20px; }
+input, textarea { padding: 12px; border: 1px solid #ddd; border-radius: 6px; width: 100%; }
+form button { background: #E85A42; color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; }
+.error { color: red; font-size: 14px; }
+
+footer { text-align: center; background: #333; color: white; padding: 20px; margin-top: 40px; }
+
+/* RESPONSIVE DESIGN - Media Queries */
+@media (max-width: 768px) {
+  /* Tablet */
+  .grid-container { grid-template-columns: repeat(2, 1fr); }
+  .hero h2 { font-size: 28px; }
+  #menuBtn { display: block; }
+  .nav-links { display: none; flex-direction: column; background: #E85A42; position: absolute; top: 65px; right: 20px; padding: 15px; border-radius: 8px; }
+  .nav-links.show { display: flex; }
+}
+
+@media (max-width: 480px) {
+  /* Mobile Phone */
+  .grid-container { grid-template-columns: 1fr; } /* 1 column */
+  .flex-container { flex-direction: column; align-items: center; }
+  .navbar { padding: 12px 15px; }
+  .hero { padding: 40px 15px; }
+}
+hero-img {
+  width: 100%;
+  height: 220px;
+  min-height: fit-content;
+  object-fit: cover;
+  border-radius:12px;
+  display:block;
+  overflow: hidden;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Micha's Kitchen</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Micha's Kitchen</h1>
+      <button id="menuBtn">☰ Menu</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Menu / Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-content">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> counter@michaskitchen.com</p>
+    <p><strong>Phone:</strong> +234 701 153 2152 (Sample)</p>
+    <p><strong>Address:</strong> 12 Allen Avenue, Ikeja, Lagos</p>
+
+    <form id="contactForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" placeholder="Enter your full name">
+      <p class="error" id="nameError"></p>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email">
+      <p class="error" id="emailError"></p>
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" placeholder="Enter subject">
+      <p class="error" id="subjectError"></p>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Type your message"></textarea>
+      <p class="error" id="messageError"></p>
+
+      <button type="submit">Submit</button>
+      <p id="successMessage"></p>
+    </form>
+  </main>
+  <footer><p>&copy; 2026 Micha's Kitchen</p></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
